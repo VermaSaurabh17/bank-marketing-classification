@@ -16,9 +16,10 @@ from sklearn.naive_bayes import GaussianNB
 from sklearn.svm import LinearSVC
 
 
-# Define the dataset and model storage locations.
-DATA_PATH = Path("data/bank-full.csv")
-MODEL_DIR = Path("models")
+# Define paths relative to this script so training and the app use the same files.
+BASE_DIR = Path(__file__).resolve().parent
+DATA_PATH = BASE_DIR / "data" / "bank-full.csv"
+MODEL_DIR = BASE_DIR / "model"
 
 RANDOM_STATE = 42
 
